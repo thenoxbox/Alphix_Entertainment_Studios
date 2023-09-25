@@ -1,56 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    color: #007bff;
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  p {
-    margin: 20px;
-    line-height: 1.5;
-  }
-  
-  ul {
-    margin: 20px;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  /* Button styles */
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 24px;
-    }
-    
-    p {
-      font-size: 14px;
-    }
-    
-    .button {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  }
+ /* Add some CSS for the dropdown */
+ *{
+  font-family: 'Kenia', cursive;
+ }
+ .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+   /* Prevent the mouse events from reaching the drop-down content when the user is hovering over the Games button */
+  pointer-events: none;
+  padding: 60px;
+    /* Prevent the dropdown content from overflowing the screen */
+  overflow-y: auto;
+
+ }
+ 
+ .dropdown-content a {
+   /* Allow the user to click on the links in the drop-down menu */
+   pointer-events: auto;
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .dropdown-content a:hover {
+  background-color: #ddd;
+ }
+ 
+ /* Show the dropdown when hovering over the Games button */
+ .dropbtn:hover + .dropdown-content,
+ .dropdown-content:hover {
+  display: block;
+ }
+ 
+     /* Add CSS to place the image, link, and Games button on the same line */
+     .nav-bar img,
+     .nav-bar a,
+     .nav-bar .dropbtn {
+         vertical-align: middle;
+         display: inline-block;
+         margin-right: 10px; /* Add some spacing between elements */
+     }
+     .nav-bar img{
+      width: 90px;
+     }
+     .nav-bar a{
+      text-decoration: none;
+      font-size: 30px;
+      color: black;
+      position: relative;
+      right: 40px;
+     }
+     .dropbtn{
+      font-family:'Courier New', Courier, monospace;
+     }
+
+     .dropdown-content a {
+      cursor: pointer;
+      }
+     .dropdown-content a:active {
+      position: relative;
+      }
+      .dropbtn{
+        border-style: none;
+        color: white;
+        background-color: red;
+        font-weight: bold;
+        border-radius: 50rem;
+        padding: 10px;
+        margin-left: -30px;
+      }
+      .dropbtn:hover {
+        color: red;
+        background-color: white;
+        border-color: red;
+        transition: 0.5s;
+        box-shadow: 0px 8px 16px 0px rgba(165, 19, 19, 0.2);
+      }
